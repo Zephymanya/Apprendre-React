@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Maman from "./components/Maman";
+import Display from "./Display";
 
 export default function App() {
   return (
     <div>
-      <Maman />
+      <Display />
     </div>
   );
 }
