@@ -1,0 +1,19 @@
+.content_menu {
+  background-color: rgb(5, 0, 16);
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1%;
+}
+.content_sous_menu {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  margin-left: -10%;
+height: ;
+}
+

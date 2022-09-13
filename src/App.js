@@ -1,35 +1,19 @@
 import React from "react";
-import "./App.css";
-import Modal from "./Modal";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Profil from "./Profil";
+import { Mycontext } from "./MyContext";
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showModal: false,
-    };
-  }
-
-  handleShow = () => {
-    this.setState({
-      showModal: true,
-    });
+  state = {
+    user: {
+      name: "Lisa",
+      age: 8,
+    },
   };
-  handleclose = () => {
-    this.setState({
-      showModal: false,
-    });
-  };
-
   render() {
-    const affichModal =
-      this.state.showModal === true ? <Modal close={this.handleclose} /> : null; //Condition d'affiche du modal
     return (
-      <div className="App">
-        <button onClick={this.handleShow}>Affichier le modal</button>
-        {affichModal}
-      </div>
+      <Mycontext.Provider value={this.state.user}>
+        <Profil nom={this.state.user} />
+      </Mycontext.Provider>
     );
   }
 }
