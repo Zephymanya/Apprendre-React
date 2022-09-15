@@ -1,21 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Profil from "./Profil";
-import { Mycontext } from "./MyContext";
-class App extends React.Component {
-  state = {
-    user: {
-      name: "Lisa",
-      age: 8,
-    },
-  };
-  render() {
-    return (
-      <Mycontext.Provider value={this.state.user}>
-        <Profil nom={this.state.user} />
-      </Mycontext.Provider>
-    );
-  }
+import Todo from "./Component/Todo";
+function App() {
+  return (
+    <div
+      style={{
+        marginLeft: "4em",
+      }}
+    >
+      <h1>UseState Hook</h1>
+      <Todo />
+    </div>
+  );
 }
 
 export default App;
